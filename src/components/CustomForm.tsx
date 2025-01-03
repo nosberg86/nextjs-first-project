@@ -32,14 +32,16 @@ const CustomForm = ({ url, task }: props) => {
     let resp: Response;
 
     if (task?.id) {
+      //Edit Task
       resp = await fetch(url + task.id, {
         method: "PUT",
         body: JSON.stringify({ title, description }),
         headers: {
           "Content-type": "aplication/json",
         },
-      }); //Edit
+      });
     } else {
+      //Create Task
       resp = await fetch(url, {
         method: "POST",
         body: JSON.stringify({ title, description }),
