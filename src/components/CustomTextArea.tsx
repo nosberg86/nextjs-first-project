@@ -1,9 +1,10 @@
 "use client";
-import { Control, Controller, FieldElement, FieldError } from "react-hook-form";
+import { taskFormValues } from "@/models/taskSchema";
+import { Control, Controller, FieldError } from "react-hook-form";
 
 interface props {
-  name: string;
-  control: Control<any>;
+  name: keyof taskFormValues;
+  control: Control<taskFormValues>;
   label: string;
   rows: number;
   error?: FieldError;

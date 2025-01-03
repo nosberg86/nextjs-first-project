@@ -1,7 +1,5 @@
 import CustomForm from "@/components/CustomForm";
 import { Task } from "@prisma/client";
-import * as React from "react";
-import { Usable } from "react";
 
 type Params = Promise<{ id: number }>;
 

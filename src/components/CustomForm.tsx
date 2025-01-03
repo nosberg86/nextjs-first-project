@@ -49,6 +49,7 @@ const CustomForm = ({ url, task }: props) => {
       });
     }
     const data = await resp.json();
+    console.log(data);
     router.push("/");
   };
 

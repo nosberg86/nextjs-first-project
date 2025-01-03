@@ -1,15 +1,8 @@
-interface task {
-  id: number;
-  title: string;
-  description: string;
-  createdAt: Date;
-}
 import TaskCard from "@/components/TaskCard";
+import prisma from "@/libs/prisma";
 
 async function loadTask() {
-  const res = await fetch("http://localhost:3000/api/task");
-  const data: task[] = await res.json();
-  return data;
+  return await prisma.task.findMany();
 }
 
 async function HomePage() {
