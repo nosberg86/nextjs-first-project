@@ -6,7 +6,7 @@ interface task {
   task: {
     id: number;
     title: string;
-    description: string | undefined;
+    description: string | undefined | null;
     createdAt: Date;
   };
 }
