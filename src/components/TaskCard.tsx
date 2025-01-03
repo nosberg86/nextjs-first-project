@@ -1,14 +1,10 @@
 "use client";
 
+import { Task } from "@prisma/client";
 import { useRouter } from "next/navigation";
 
 interface task {
-  task: {
-    id: number;
-    title: string;
-    description: string | undefined | null;
-    createdAt: Date;
-  };
+  task: Task;
 }
 
 export default function TaskCard({ task }: task) {
